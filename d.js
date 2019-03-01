@@ -25,10 +25,10 @@ function permutateArrayOfList(arrayOfLists) {
 }
 
 function mixer(mixedArray, list) {
-    if (mixedArray.length < 2 && list.length === 1) {
+    if (mixedArray.length === 0 && list.length === 1) {
         return mixedArray.concat([list]);
     } else if (list.length === 1) {
-        return mixedArray.map(mixedArrayElement => mixedArrayElement.concat([list]));
+        return mixedArray.map(mixedArrayElement => mixedArrayElement.concat(list));
     }
 
     let newArrays = [];
